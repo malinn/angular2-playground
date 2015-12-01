@@ -1,0 +1,6 @@
+<h4>Little Tour of Heroes</h4>
+<input #new-hero
+	   (keyup.enter)="addHero(newHero)"
+	   (blur)="addHero(newHero)">
+<button (click)=addHero(newHero)>Add</button>
+<ul><li *ng-for="#hero of heroService.getHeroes()">{{hero.name}}</li></ul>
