@@ -3,13 +3,13 @@ import {Hero} from 'components/hero/Hero';
 import {HeroService} from 'components/hero/HeroService';
 
 @Component({
-	selector: 'my-app',
+	selector: 'list-hero',
 	directives: [FORM_DIRECTIVES, CORE_DIRECTIVES],
 	templateUrl: 'components/hero/hero.html',
 	styleUrls: ["components/hero/hero.css"]
 })
 
-class HeroComponent {
+export class HeroComponent {
 	public title;
 	public heroes;
 	public selectedHero;
@@ -29,5 +29,3 @@ class HeroComponent {
 	}
 
 }
-
-bootstrap(HeroComponent, [HeroService]);

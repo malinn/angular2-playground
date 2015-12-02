@@ -8,7 +8,7 @@ import {HeroService} from 'components/hero/HeroService';
 	directives: [CORE_DIRECTIVES]
 })
 
-class AddHeroComponent {
+export class AddHero {
 
 	constructor(private heroService: HeroService) {
 
@@ -22,4 +22,3 @@ class AddHeroComponent {
 	}
 }
 
-bootstrap(AddHeroComponent, [HeroService]);
