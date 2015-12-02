@@ -1,4 +1,4 @@
-import {bootstrap, Component, NgZone, CORE_DIRECTIVES} from 'angular2/angular2';
+import {bootstrap, Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {Hero} from 'components/hero/Hero';
 import {HeroService} from 'components/hero/HeroService';
 
@@ -10,7 +10,7 @@ import {HeroService} from 'components/hero/HeroService';
 
 class AddHeroComponent {
 
-	constructor(private heroService: HeroService, private ngZone: NgZone) {
+	constructor(private heroService: HeroService) {
 
 	}
 
@@ -18,7 +18,6 @@ class AddHeroComponent {
 		if (newHero.value) {
 			this.heroService.addHero(new Hero(11, newHero.value));
 			newHero.value = null; // clear the newHero textbox
-			this.ngZone.run(() => {console.log('Outside Done!') });
 		}
 	}
 }
